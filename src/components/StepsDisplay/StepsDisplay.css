@@ -1,0 +1,49 @@
+.container {
+    width: 100%;
+}
+.stepsbar {
+    list-style-type: none;
+}
+.stepsbar li {
+    float: left;
+    width: 20%;
+    position: relative;
+    text-align: center;
+}
+.stepsbar li:before {
+    content: '';
+    width: 50px;
+    height: 50px;
+    line-height: 30px;
+    border: 1px solid #ddd;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    border-radius: 50%;
+    background-color: #ddd;
+    transition: 4s linear;
+    transition-property: background-color;
+}
+.stepsbar li:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: #ddd;
+    top: 15px;
+    left: -50%;
+    z-index: -1;
+    transition: 4s linear;
+    transition-property: background-color;
+}
+.stepsbar li:first-child:after {
+    content: none;
+}
+
+.stepsbar li.processed:before, .stepsbar li.processed:after {
+    background-color: purple;
+}
+.stepsbar li.processed button {
+    background-color: purple;
+    color: white;
+}
