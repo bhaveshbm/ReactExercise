@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import './StepsSetup.css';
 const StepsSetup = ({ steps, stepsUpdate }) => {
   
   return(
