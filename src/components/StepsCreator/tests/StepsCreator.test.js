@@ -36,13 +36,4 @@ describe('StepCreator component', () => {
     expect(input.node.value).toEqual('');
     expect(input.hasClass('error')).toBeTruthy();
   });
-  it('Should call updateSteps method when correnct steps enters', () => {
-    component = mount(<StepsCreator stepsCreate={mockFn} />);
-    expect(mockFn.mock.calls.length).toEqual(0);
-    const input = component.find('.step-input');
-    input.node.value = '3';
-    input.simulate('change');
-    expect(mockFn.mock.calls.length).toEqual(1);
-    expect(mockFn.mock.calls[0][0]).toBe(3);
-  })
 })

@@ -20,14 +20,6 @@ describe('Steps Display Component', () => {
   it('Should render successfully', () => {
     expect(component.exists()).toEqual(true);
   });
-  it('Should display message if no steps exists', () => {
-    props.steps = [];
-    component = shallow(<StepsDisplay {...props} />)
-    expect(component.find('#message').length).toEqual(1);
-  });
-  it('Should not display message if steps exists', () => {
-    expect(component.find('#message').length).toEqual(0);
-  });
   it('Should disable all buttons apart from active steps', () => {
     expect(component.find('.not-active').length).toEqual(2);
     expect(component.find('.active').length).toEqual(1);

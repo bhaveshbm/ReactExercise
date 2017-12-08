@@ -41,8 +41,8 @@ export default class Steps extends PureComponent {
       <div>
         <StepsCreator stepsCreate={this.stepsCreate} />
         {stepsDisplay && <StepsDisplay {...this.state} setActiveStep={this.setActiveStep} />}
-        {!stepsDisplay && steps.length 
-          && <StepsSetup steps={steps} stepsUpdate={this.stepsUpdate} />
+        {!stepsDisplay && steps.length > 0 &&
+          <StepsSetup steps={steps} stepsUpdate={this.stepsUpdate} />
         }
       </div>
     )

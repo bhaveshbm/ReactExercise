@@ -19,15 +19,6 @@ describe('Steps Setup Component', () => {
   it('Should render successfully', () => {
     expect(component.exists()).toEqual(true);
   });
-  it('Should display message if no steps exists', () => {
-    props.steps = [];
-    component = shallow(<StepsSetup {...props} />)
-    expect(component.find('#message').length).toEqual(1);
-  });
-  it('Should not display message if steps exists', () => {
-    expect(component.find('#message').length).toEqual(0);
-    expect(component.find('input').length).toEqual(3);
-  });
   it('Should called setsUpdate function on button click', () => {
     component = mount(<StepsSetup {...props} />)
     const Button = component.find('.step-submit');

@@ -20,6 +20,7 @@ export class StepsCreator extends PureComponent {
     this.setState({ isError });
     if (isError) {
       event.target.value = '';
+      this.props.stepsCreate(0);
       this.stepInput.focus();
     } else {
       this.props.stepsCreate(val);

@@ -4,8 +4,6 @@ const StepsSetup = ({ steps, stepsUpdate }) => {
   
   return(
     <div className={'container'}>
-      { !steps.length
-        && <p id={'message'}>Add steps between 2 and 5</p> }
         <h2>Setup labels </h2>
         { steps.map(step => {
           return(
